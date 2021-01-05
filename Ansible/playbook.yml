@@ -1,0 +1,10 @@
+- name: Apache - Criando o serviço
+  hosts: Apache
+  user: vagrant
+  become: yes
+  become_user: root
+
+  tasks:
+    # task 1
+    - name: Instala a última versão Apache
+      package: name=apache2 state=latest

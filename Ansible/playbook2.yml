@@ -1,0 +1,10 @@
+- name: Mysql - Criando o serviço
+  hosts: Mysql
+  user: vagrant
+  become: yes
+  become_user: root
+
+  tasks:
+    # task 1
+    - name: Instala a última versão Mysql
+      package: name=mysql-server state=latest
